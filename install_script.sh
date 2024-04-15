@@ -27,7 +27,7 @@ read dummy
 #install packages
 sudo apt-get update
 sudo apt update
-sudo apt install unzip zip
+sudo apt install unzip zip wget curl -y
 
 #install oh my posh
 mkdir ~/.config
@@ -53,6 +53,10 @@ mv nvim-linux64 nvim
 sudo mv nvim /opt
 git clone git@github:cperryoh/neovim-config.git ~/.config/nvim
 rm nvim-linux64.tar.gz
+
+#npm install 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 20
 
 #install formatters
 npm install -g prettier
